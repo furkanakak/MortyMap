@@ -1,0 +1,79 @@
+# --- Android build artefacts ---
+/build/
+/**/build/
+/out/
+/captures/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# --- Gradle ---
+/.gradle/
+buildSrc/.gradle/
+/**/.gradle/
+/gradle-app.setting
+# Gradle Wrapper dosyaları REPOYA GİRMELİ (jar ve properties):
+# !gradle/wrapper/gradle-wrapper.jar
+# !gradle/wrapper/gradle-wrapper.properties
+
+# --- Local/Env ---
+local.properties
+*.keystore
+*.keystore.lock
+*.jks
+*.p12
+*.pem
+*.key
+signing.properties
+*.keystore.properties
+
+# --- Android Studio / IntelliJ IDEA ---
+*.iml
+/.idea/
+/.idea/*
+!.idea/codeStyles/        # (isteğe bağlı: kod stili paylaşmak istersen bu satırı kaldırma)
+!.idea/inspectionProfiles/
+!.idea/runConfigurations/
+
+# --- Kotlin/Java tooling ---
+/.kotlin/
+/**/.kotlin/
+*.kotlin_module
+
+# --- NDK / CMake ---
+/.cxx/
+/obj/
+
+# --- Lint/Jacoco/Coverage ---
+/**/lint/intermediates/
+/**/lint/generated/
+/**/lint/outputs/
+/**/lint/tmp/
+lint-results.*
+/coverage/
+/**/jacocoTestReport/*
+*.ec
+*.exec
+
+# --- Logs & temp ---
+*.log
+*.tmp
+*.temp
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/httpRequests/
+
+# --- Fastlane (varsa) ---
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# --- Crashlytics/Firebase (tercihe göre) ---
+# google-services.json   # gizli tutmak istiyorsan yorumdan çıkarıp ignore et
+# GoogleService-Info.plist
