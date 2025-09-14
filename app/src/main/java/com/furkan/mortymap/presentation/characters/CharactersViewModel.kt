@@ -6,10 +6,9 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.furkan.mortymap.data.model.Character
 import com.furkan.mortymap.data.repository.Repository
-import javax.inject.Inject
-import com.furkan.mortymap.domain.repository.IRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 @HiltViewModel
 class CharactersViewModel @Inject constructor(repository: Repository) : ViewModel() {

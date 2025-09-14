@@ -1,4 +1,4 @@
-package com.furkan.mortymap.presentation.origins
+package com.furkan.mortymap.presentation.locations
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

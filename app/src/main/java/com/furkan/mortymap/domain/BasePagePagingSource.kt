@@ -7,7 +7,6 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import retrofit2.HttpException
 import retrofit2.Response
-import kotlin.math.ceil
 
 abstract class BasePagePagingSource<T : Any>() : PagingSource<Int, T>() {
 

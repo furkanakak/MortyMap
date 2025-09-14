@@ -1,4 +1,4 @@
-package com.furkan.mortymap.presentation.origins
+package com.furkan.mortymap.presentation.locations
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Divider
+import androidx.compose.material3.DividerDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -50,9 +52,9 @@ fun LocationItem(
         tonalElevation = 0.dp,
         shadowElevation = 0.dp
     )
-    Divider(
+    HorizontalDivider(
         modifier = Modifier.padding(horizontal = 16.dp),
-        color = MaterialTheme.colorScheme.surfaceVariant
+        thickness = DividerDefaults.Thickness, color = MaterialTheme.colorScheme.surfaceVariant
     )
 }
 
