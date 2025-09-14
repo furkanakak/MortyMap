@@ -1,8 +1,8 @@
 package com.furkan.mortymap.data.repository
 
-import android.util.Log
 import androidx.paging.PagingData
 import com.furkan.mortymap.data.model.Character
+import com.furkan.mortymap.data.model.Origin
 import com.furkan.mortymap.data.remote.ApiService
 import com.furkan.mortymap.domain.BasePagerFactory
 import com.furkan.mortymap.domain.repository.BaseRepository
@@ -15,8 +15,13 @@ class Repository @Inject constructor(
 ) : BaseRepository(), IRepository {
     override fun fetchPagedCharacters(): Flow<PagingData<Character>> =
         BasePagerFactory.create { page ->
-            Log.v("paged12","page $page")
             val list = service.fetchCharacters(page).body()?.results.orEmpty()
+            retrofit2.Response.success(list)
+        }.flow
+
+    override fun fetchPagedLocation(): Flow<PagingData<Origin>> =
+        BasePagerFactory.create { page ->
+            val list = service.fetchLocation(page).body()?.results.orEmpty()
             retrofit2.Response.success(list)
         }.flow
 }

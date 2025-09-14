@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.furkan.mortymap.presentation.characters.CharactersScreen
+import com.furkan.mortymap.presentation.origins.OriginsScreen
 import com.furkan.mortymap.presentation.theme.MortyMapTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MortyMapTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    CharactersScreen(
+                    OriginsScreen(
                         contentPadding = innerPadding
                     )
                 }

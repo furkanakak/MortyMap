@@ -1,6 +1,5 @@
 package com.furkan.mortymap.data.remote
 
-import com.furkan.mortymap.data.model.Character
 import com.furkan.mortymap.data.model.CharacterResponse
 import com.furkan.mortymap.data.model.OriginResponse
 import retrofit2.Response
@@ -12,6 +11,6 @@ interface ApiService {
     suspend fun fetchCharacters(@Query("page") page: Int): Response<CharacterResponse>
 
     @GET("location")
-    suspend fun fetchOrigins(): Response<OriginResponse>
+    suspend fun fetchLocation(@Query("page") page: Int): Response<OriginResponse>
 
 }
